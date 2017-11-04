@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>mmax(1d) 2017-10-13 · alanqian · GitHub</title>
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="refresh" content="30">
+  <!--
+  <meta http-equiv="refresh" content="60">  <!-- 60=60s -- >
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="Sunday 26 October 2008 01:00 GMT">
+  <meta http-equiv="expires" content="0">
+  -->
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-d7137690e30123bade38abb082ac79f36cc7a105ff92e602405f53b725465cab.css" media="all" rel="stylesheet" />
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-d2385d1d8b66f7f4897ceb99bea7f2144f84764f87058d1d87f4cc5111945130.css" media="all" rel="stylesheet" />
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-cd79f063f6da2fef8de0055aa11c913cc1873486fc05ade3227e0cbcc7a168c6.css" media="all" rel="stylesheet" />
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta http-equiv="x-pjax-version" content="32a3557668d008ee7f681ab6da40bb84">
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+  <!--
+  <meta property="fb:app_id" content="1401488693436528">
+  <meta content="https://avatars3.githubusercontent.com/u/1732496?s=400&amp;v=4" property="og:image" />
+  <meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" />
+  <meta content="alanqian/hes_index" property="og:title" />
+  <meta content="https://github.com/alanqian/hes_index" property="og:url" />
+  <meta content="Contribute to hes_index development by creating an account on GitHub." property="og:description" />
+  <meta name="pjax-timeout" content="1000">
+  <meta name="request-id" content="8360:1617C:729BE3:AE39B8:59FA6C7A" data-pjax-transient>
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+  <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+  <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+  <meta name="google-analytics" content="UA-3769691-2">
+  <meta content="collector.githubapp.com" name="octolytics-host" />
+  <meta content="github" name="octolytics-app-id" />
+  <meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" />
+  <meta content="8360:1617C:729BE3:AE39B8:59FA6C7A" name="octolytics-dimension-request_id" />
+  <meta content="sea" name="octolytics-dimension-region_edge" />
+  <meta content="iad" name="octolytics-dimension-region_render" />
+  <meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location" />
+  <meta class="js-ga-set" name="dimension1" content="Logged Out">
+  <meta name="hostname" content="github.com">
+  <meta name="user-login" content="">
+  <meta name="expected-hostname" content="github.com">
+  <meta name="js-proxy-site-detection-payload" content="MmYyYjk4MDEzNDE2OTA0MmE2MTM3NTdlODc5ODExOGE0ZTkzZDJiMjY4Y2JjODBjNzkyZmIwMDY4NmZkNjUxZHx7InJlbW90ZV9hZGRyZXNzIjoiMjIzLjcyLjY4LjciLCJyZXF1ZXN0X2lkIjoiODM2MDoxNjE3Qzo3MjlCRTM6QUUzOUI4OjU5RkE2QzdBIiwidGltZXN0YW1wIjoxNTA5NTgzOTk1LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+  <meta name="html-safe-nonce" content="a623cfb2acc517e15241f05a645180cd7c112747">
+  <meta name="description" content="Contribute to hes_index development by creating an account on GitHub.">
+  <meta name="go-import" content="github.com/alanqian/hes_index git https://github.com/alanqian/hes_index.git">
+  <meta content="1732496" name="octolytics-dimension-user_id" />
+  <meta content="alanqian" name="octolytics-dimension-user_login" />
+  <meta content="100567769" name="octolytics-dimension-repository_id" />
+  <meta content="alanqian/hes_index" name="octolytics-dimension-repository_nwo" />
+  <meta content="true" name="octolytics-dimension-repository_public" />
+  <meta content="false" name="octolytics-dimension-repository_is_fork" />
+  <meta content="100567769" name="octolytics-dimension-repository_network_root_id" />
+  <meta content="alanqian/hes_index" name="octolytics-dimension-repository_network_root_nwo" />
+  <meta content="false" name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" />
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  <link href="https://github.com/alanqian/hes_index/commits/master.atom" rel="alternate" title="Recent Commits to hes_index:master" type="application/atom+xml">
+  <link rel="canonical" href="https://github.com/alanqian/hes_index/blob/master/hes_index.csv" data-pjax-transient>
+  -->
+</head>
+
+<body class="logged-out env-production page-blob">
+  <!--
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="px-2 py-4 show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+    <header class="Header header-logged-out  position-relative f4 py-3" role="banner">
+    </header> 
+  </div>
+  <div id="start-of-content" class="show-on-focus"></div>
+  <div id="js-flash-container">
+  </div>
+  -->
+  <div role="main">
+    <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
+      <div id="js-repo-pjax-container" data-pjax-container>
+        <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav ">
+          <div class="repohead-details-container clearfix container ">
+            <ul class="pagehead-actions">
+            </ul>
+            <h1 class="public ">
+              <svg aria-hidden="true" class="octicon octicon-repo" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+              <span class="author" itemprop="author"><a href="/alanqian" class="url fn" rel="author">alanqian</a></span>
+              <span class="path-divider">/</span><strong itemprop="name">mmax(1d) 2017-10-13</strong>
+            </h1>
+          </div>
+          <!--
+          <nav class="reponav js-repo-nav js-sidenav-container-pjax container"
+          </nav>
+          -->
+        </div>
+
+        <div class="container new-discussion-timeline experiment-repo-nav">
+          <div class="repository-content">
+            <div class="file-navigation js-zeroclipboard-container">
+              <div class="BtnGroup float-right">
+                <a href="mmax_15min.html" class="btn btn-sm BtnGroup-item"> 15min </a>
+                <a href="mmax_30min.html" class="btn btn-sm BtnGroup-item"> 30min </a>
+                <a href="mmax_1h.html" class="btn btn-sm BtnGroup-item"> 1h </a>
+                <a href="mmax_2h.html" class="btn btn-sm BtnGroup-item"> 2h </a>
+                <a href="#" class="btn btn-sm BtnGroup-item"> 1d </a>
+              <!--
+                <a href="#15min" class="btn btn-sm BtnGroup-item" data-pjax data-hotkey="t"> 15min </a>
+                <a href="#2h" class="btn btn-sm BtnGroup-item" data-pjax data-hotkey="t"> 2h </a>
+                <a href="#" class="btn btn-sm BtnGroup-item" data-pjax data-hotkey="t"> 1d </a>
+              -->
+              </div>
+              <div class="breadcrumb js-zeroclipboard-target">
+                <span class="repo-root js-repo-root"><span class="js-path-segment"><span>mmax</span></span></span>
+                <span class="separator">/</span>
+                <strong class="final-path"> 1d </strong>
+                <span class="separator">/</span>
+                <strong class="final-path"> 2017-10-13 00:00 </strong>
+              </div>
+            </div>
+            <div class="file">
+              <!--
+              <div class="file-header">
+              </div>
+              -->
+              <div itemprop="text" class="blob-wrapper data type-csv">
+                <div class="blob-interaction-bar">
+                  <svg aria-hidden="true" class="octicon octicon-search" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+                  <input type="text" name="filter" class="form-control js-csv-filter-field blob-filter" autocapitalize="off"
+                  placeholder="Search this file…" aria-label="Search this file…">
+                </div>
+
+                <div class="markdown-body">
+                  <table class="js-csv-data csv-data js-file-line-container">
+                  <thead>
+                    <tr id="LC1" class="js-file-line">
+                      <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+                      <th rowspan=2>K</th>
+                      <th colspan=3>120</th>
+                      <th colspan=3>250</th>
+                      <th colspan=3>610</th>
+                      <th colspan=3>987</th>
+                    </tr>
+                    <tr id="LC2" class="js-file-line">
+                      <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
+                      <th>-</th><th>x</th><th>=</th>
+                      <th>-</th><th>x</th><th>=</th>
+                      <th>-</th><th>x</th><th>=</th>
+                      <th>-</th><th>x</th><th>=</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="LC3" class="js-file-line">
+                      <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
+                      <td><strong>60</strong></td>
+                      <td>sh600038<br>sh600081<br>sh600085<br>sh600089<br>sh600094<br>sh600106<br>sh600119<br>sh600128<br>sh600195<br>sh600196<br>sh600201<br>sh600223<br>sh600229<br>sh600266<br>sh600302<br>sh600319<br>sh600329<br>sh600376<br>sh600418<br>sh600422<br>sh600436<br>sh600529<br>sh600561<br>sh600575<br>sh600611<br>sh600612<br>sh600626<br>sh600630<br>sh600633<br>sh600660<br>sh600675<br>sh600684<br>sh600697<br>sh600736<br>sh600751<br>sh600756<br>sh600784<br>sh600785<br>sh600794<br>sh600803<br>sh600818<br>sh600820<br>sh600827<br>sh600831<br>sh600833<br>sh600847<br>sh600860<br>sh600866<br>sh601016<br>sh601177<br>sh601238<br>sh601390<br>sh601588<br>sh601808<br>sh601997<br>sh603005<br>sh603010<br>sh603011<br>sh603315<br>sh603816<br>sh603900<br>sh603979<br>sz000400<br>sz000416<br>sz000507<br>sz000533<br>sz000541<br>sz000566<br>sz000595<br>sz000620<br>sz000650<br>sz000682<br>sz000692<br>sz000705<br>sz000727<br>sz000753<br>sz000785<br>sz000826<br>sz000966<br>sz000987<br>sz002031<br>sz002032<br>sz002105<br>sz002172<br>sz002216<br>sz002242<br>sz002294<br>sz002346<br>sz002352<br>sz002368<br>sz002381<br>sz002385<br>sz002393<br>sz002437<br>sz002461<br>sz002469<br>sz002491<br>sz002498<br>sz002550<br>sz002585<br>sz002608<br>sz002622<br>sz002678<br>sz002707<br>sz300093<br>sz300174<br>sz300185<br>sz300204<br>sz300217<br>sz300238<br>sz300378<br>sz300400<br>sz300441<br>sz300470<br>sz300502</td>
+                      <td>sh600060<br>sh600114<br>sh600284<br>sh600359<br>sh600371<br>sh600396<br>sh600488<br>sh600495<br>sh600513<br>sh600589<br>sh600681<br>sh600767<br>sh600881<br>sh601010<br>sh601579<br>sh603223<br>sh603519<br>sh603726<br>sz000419<br>sz000681<br>sz000909<br>sz002045<br>sz002090<br>sz002146<br>sz002177<br>sz002207<br>sz002215<br>sz002244<br>sz002315<br>sz002401<br>sz002425<br>sz002444<br>sz002533<br>sz002573<br>sz002660<br>sz002696<br>sz002731<br>sz002798<br>sz300008<br>sz300047<br>sz300130<br>sz300297<br>sz300443</td>
+                      <td>sh600203<br>sh600616<br>sh600676<br>sh600830<br>sh600858<br>sz000550<br>sz000616<br>sz002062<br>sz002065<br>sz002404<br>sz002429<br>sz002523<br>sz002527<br>sz002528<br>sz002593<br>sz300006<br>sz300158<br>sz300325<br>sz300463<br>sz300567<br>sz300579<br>sz300619</td>
+                      <td>sh600054<br>sh600076<br>sh600135<br>sh600280<br>sh600317<br>sh600339<br>sh600531<br>sh600998<br>sh601008<br>sh601877<br>sz000043<br>sz000539<br>sz000666<br>sz000716<br>sz000869<br>sz000876<br>sz002003<br>sz002020<br>sz002086<br>sz002242<br>sz002370<br>sz002482<br>sz002717<br>sz002763<br>sz300398<br>sz399100<br>sz399101</td>
+                      <td>sh600345<br>sz002664<br>sz002670</td>
+                      <td>sh600390<br>sz000826<br>sz002333<br>sz300133<br>sz300395</td>
+                      <td>sh600067<br>sh600152<br>sh600259<br>sh600322<br>sh600323<br>sh600714<br>sh600886<br>sh601677<br>sz002242<br>sz002255<br>sz002335<br>sz002348<br>sz002407<br>sz300036</td>
+                      <td>sh000001<br>sh000002<br>sh000017<br>sh600619<br>sh600992<br>sz300128</td>
+                      <td></td>
+                      <td>sh600157<br>sh600166<br>sh600213<br>sh600683<br>sh600686<br>sh600980<br>sh603333<br>sz000416<br>sz000531<br>sz000541<br>sz000558<br>sz000631<br>sz000691<br>sz000925<br>sz002225<br>sz002391<br>sz002521<br>sz002533<br>sz002552<br>sz300050<br>sz300213<br>sz300328</td>
+                      <td>sh600307<br>sz002231<br>sz002645<br>sz300263</td>
+                      <td>sh600006<br>sh600080<br>sz000909<br>sz002064<br>sz002604</td>
+                    </tr>
+                    <tr id="LC4" class="js-file-line">
+                      <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
+                      <td><strong>120</strong></td>
+                      <td class='cross-na' colspan=3>---</td>
+                      <td>sh600061<br>sh600067<br>sh600115<br>sh600208<br>sh600221<br>sh600290<br>sh600383<br>sh600475<br>sh600528<br>sh600578<br>sh600614<br>sh600761<br>sh600780<br>sh600798<br>sh600835<br>sh601009<br>sh601128<br>sh601377<br>sh601608<br>sh601766<br>sh601996<br>sh603019<br>sh603188<br>sh603686<br>sh603788<br>sh603898<br>sh603899<br>sz000062<br>sz000623<br>sz000672<br>sz000926<br>sz000983<br>sz002013<br>sz002081<br>sz002121<br>sz002223<br>sz002242<br>sz002252<br>sz002258<br>sz002333<br>sz002362<br>sz002422<br>sz002478<br>sz002494<br>sz002510<br>sz002511<br>sz002536<br>sz002650<br>sz002759<br>sz300092<br>sz300149<br>sz300166<br>sz300232<br>sz300393<br>sz399001<br>sz399108</td>
+                      <td>sh600596<br>sz002594</td>
+                      <td>sz002218<br>sz002517</td>
+                      <td>sh600020<br>sh600086<br>sh600135<br>sh600345<br>sh600491<br>sh600499<br>sh600577<br>sh600584<br>sh600600<br>sh600688<br>sh600841<br>sh601015<br>sh601028<br>sh603997<br>sz000048<br>sz000090<br>sz000411<br>sz000415<br>sz000697<br>sz000826<br>sz000852<br>sz002027<br>sz002205<br>sz002242<br>sz002422<br>sz002564<br>sz002630<br>sz300040<br>sz300223<br>sz300334</td>
+                      <td>sh600111<br>sh601899<br>sz000039</td>
+                      <td>sh600348</td>
+                      <td>sh600030<br>sh600067<br>sh600082<br>sh600444<br>sh600552<br>sh600873<br>sz000852<br>sz002016<br>sz002137<br>sz002155<br>sz002160<br>sz002196<br>sz002248<br>sz300096<br>sz300112</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr id="LC5" class="js-file-line">
+                      <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
+                      <td><strong>250</strong></td>
+                      <td class='cross-na' colspan=3>---</td>
+                      <td class='cross-na' colspan=3>---</td>
+                      <td>sh000011<br>sh600123<br>sh600550<br>sh600605<br>sh600616<br>sh600701<br>sh600735<br>sh600736<br>sh600976<br>sh601818<br>sz000001<br>sz000026<br>sz000096<br>sz000636<br>sz000683<br>sz000739<br>sz000976<br>sz002237<br>sz002324<br>sz002422<br>sz002430<br>sz002431<br>sz002447<br>sz002453<br>sz002560<br>sz002603<br>sz002734<br>sz002743<br>sz300102<br>sz300236<br>sz300387</td>
+                      <td>sh601111<br>sz300172</td>
+                      <td></td>
+                      <td>sh600052<br>sh600067<br>sh600259<br>sh600261<br>sh600418<br>sh600479<br>sh600496<br>sh600626<br>sh600640<br>sh600756<br>sh600787<br>sh601038<br>sz000532<br>sz000620<br>sz000650<br>sz000657<br>sz000819<br>sz000875<br>sz002305<br>sz002400<br>sz002658<br>sz002700</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr id="LC6" class="js-file-line">
+                      <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
+                      <td><strong>610</strong></td>
+                      <td class='cross-na' colspan=3>---</td>
+                      <td class='cross-na' colspan=3>---</td>
+                      <td class='cross-na' colspan=3>---</td>
+                      <td>sh600594<br>sz000157<br>sz000852<br>sz002216<br>sz002375</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <button type="button" data-facebox="#jump-to-line" data-facebox-class="linejump" data-hotkey="l" class="d-none">Jump to Line</button>
+            <div id="jump-to-line" style="display:none">
+              <form accept-charset="UTF-8" action="" class="js-jump-to-line-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+                <input class="form-control linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+                <button type="submit" class="btn">Go</button>
+              </form>  
+            </div>
+          </div>
+          <div class="modal-backdrop js-touch-events"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--
+<div class="footer container-lg px-3" role="contentinfo">
+</div>
+-->
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    </button>
+    You can't perform that action at this time.
+  </div>
+
+
+<script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/compat-91f98c37fc84eac24836eec2567e9912742094369a04c4eba6e3cd1fa18902d9.js"></script>
+<script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-3107d0b7861631fbb2fce3a37354ec69f3bd8a762c1e05ffc3e62e07d7bb3bff.js"></script>
+<script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-39de01257966db3860c4e61b5cec5adee22363bda77ef95a19e1305f5e3b54a4.js"></script>
+
+
+
+</body>
+</html>
